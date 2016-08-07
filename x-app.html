@@ -20,6 +20,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="bower_components/app-layout/app-header-layout/app-header-layout.html">
 <link rel="import" href="bower_components/app-layout/app-toolbar/app-toolbar.html">
 
+<link rel="import" href="bower_components/google-map/google-map.html">
+
 <link rel="import" href="bower_components/app-layout/demo/sample-content.html">
 
 <dom-module id="x-app">
@@ -49,7 +51,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         @apply(--layout-vertical);
         @apply(--layout-center-center);
         margin: 12px 16px 12px;
-        border-bottom: 1px solid #222;
+        border-bottom: 3px solid #222;
       }
 
       header {
@@ -66,21 +68,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       header > h2 {
         font-size: 56px;
-        font-weight: 300;
+        font-weight: 800;
         margin: 0;
       }
 
       header > p {
-        font-size: 32px;
+        font-size: 14px;
       }
 
       section {
         padding: 88px 16px;
       }
+      .google-map {
+        float: right;
+        width: 400px;
+        height: 300px;
+      }
 
       .container {
         @apply(--layout-horizontal);
-        max-width: 800px;
+        max-width: 500px;
         margin: 0 auto;
       }
 
@@ -120,14 +127,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#contact">Contact</a>
+            <a href="#map">Map</a>
           </div>
         </app-toolbar>
 
       </app-header>
 
       <header>
-        <h2>Welcome To Our Landing Page</h2>
-        <p>Made with App Layout Elements</p>
+        <h2>Welcome</h2>
+        <p>Made with Custom HTML Elements</p>
       </header>
 
       <section id="about">
@@ -165,6 +173,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <h3>Contact</h3>
             <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea. Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.</p>
             <p>Convenire definiebas scriptorem eu cum. Sit dolor dicunt consectetuer no. Convenire definiebas scriptorem eu cum. Sit dolor dicunt consectetuer no.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="map">
+        <div class="container">
+          <div>
+            <h3>Map</h3>
+            <google-map class="google-map" latitude="37.77493" longitude="-122.41942">
+              <google-map-marker latitude="37.779" longitude="-122.3892"
+                  draggable="true" title="Go Giants!"></google-map-marker>
+              <google-map-marker latitude="37.777" longitude="-122.38911"></google-map-marker>
+            </google-map>
+            </p>
           </div>
         </div>
       </section>
